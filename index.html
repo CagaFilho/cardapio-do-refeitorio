@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte o cardápio semanal do refeitório e avalie as refeições.">
+  <title>Cardápio do Refeitório | IFPI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <div class="icone" aria-hidden="true">🍽️</div>
+      <div>
+        <p class="sobretitulo">IFPI • CAMPUS PAULISTANA</p>
+        <h1>Cardápio do Refeitório</h1>
+      </div>
+    </div>
+    <span class="status"><span class="status-ponto"></span> Consulte a semana</span>
+  </header>
+
+  <main class="container">
+    <section class="boas-vindas">
+      <div>
+        <p class="etiqueta">INFORMAÇÃO PARA TODO MUNDO</p>
+        <h2>O que tem no refeitório?</h2>
+        <p class="subtexto">Confira as refeições da semana e conte o que achou dos pratos.</p>
+      </div>
+      <div class="decoracao" aria-hidden="true">🥗</div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-semana">
+      <div class="titulo-secao">
+        <div>
+          <p class="etiqueta">PROGRAMAÇÃO</p>
+          <h2 id="titulo-semana">Cardápio da semana</h2>
+        </div>
+        <span id="data-hoje" class="data-hoje"></span>
+      </div>
+      <div id="dias-cardapio" class="grade-cardapio" aria-live="polite"></div>
+      <p class="aviso">* Cardápio demonstrativo para a atividade. Substitua os pratos pelos dados oficiais do refeitório.</p>
+    </section>
+
+    <section class="secao avaliacao" aria-labelledby="titulo-avaliacao">
+      <div class="titulo-secao">
+        <div>
+          <p class="etiqueta">SUA OPINIÃO CONTA</p>
+          <h2 id="titulo-avaliacao">Avalie os pratos</h2>
+          <p class="subtexto">Use 👍 para gostei ou 👎 para não gostei. Você pode alterar seu voto.</p>
+        </div>
+      </div>
+      <div id="lista-avaliacao" class="lista-avaliacao"></div>
+    </section>
+
+    <section class="secao resultado" aria-labelledby="titulo-resultado">
+      <div class="titulo-secao">
+        <div>
+          <p class="etiqueta">RESULTADO DAS VOTAÇÕES</p>
+          <h2 id="titulo-resultado">Pratos mais bem avaliados</h2>
+        </div>
+      </div>
+      <div id="grafico" class="grafico"></div>
+      <p class="legenda-grafico"><span class="legenda-positivo"></span> Gostei <span class="legenda-negativo"></span> Não gostei</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto acadêmico • Hackathon IA no Campus</p>
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+  </footer>
+</body>
+</html>
